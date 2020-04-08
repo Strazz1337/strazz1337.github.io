@@ -28,11 +28,7 @@
     transform: rotate(-360deg);
   }
 
-  .logotext {
-    display: none;
-  }
-
-  svg:hover + .logotext {
+  h1 {display: none;}
+  svg:hover + h1 {
     display: block;
   }
-  
