@@ -26,7 +26,7 @@
   svg:hover {
     filter: grayscale(0%) opacity(1);
     background: var(--bg-secondary);
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 
   h1 {
