@@ -27,3 +27,12 @@
     background: var(--bg-secondary);
     transform: rotate(-360deg);
   }
+
+  .logotext {
+    display: none;
+  }
+
+  svg:hover + .logotext {
+    display: block;
+  }
+  
