@@ -10,7 +10,6 @@
   body {
     background-color: var(--bg);
     display: flex;
-    flex-direction: column;
     align-items: center;
     height: 100%;
   }
@@ -29,9 +28,13 @@
     transform: rotate(-360deg);
   }
 
-  h1 {display: none;}
-  svg:hover + h1 {
+  h1 {
     display: block;
     filter: grayscale(100%) opacity(0.7);
     font-family: 'Montserrat', sans-serif;
+  }
+
+  svg:hover + h1 {
+    color: #ececec;
+    filter: none;
   }
