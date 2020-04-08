@@ -1,18 +1,12 @@
 :root {
-    font-size: 16px;
-    font-family: 'Open Sans';
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
+    --bg: #141418;
     --transition-speed: 600ms;
   }
   
   body {
-    color: black;
-    background-color: var(--bg-secondary);
-    margin: 0;
-    padding: 0;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
   }
   
   body::-webkit-scrollbar {
@@ -24,11 +18,8 @@
   }
     
   svg {
-    display: flex;
-    align-items: center;
-    margin-top: auto;
-    color: var(--text-primary);
-    text-decoration: none;
+    margin: 0 auto;
+    display: block;
     filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
   }
