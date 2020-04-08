@@ -2,14 +2,20 @@
     --bg: #141418;
     --transition-speed: 600ms;
   }
+
+  html, body {
+      height: 100%;
+  }
   
   body {
     background-color: var(--bg);
     display: flex;
     align-items: center;
+    height: 100%;
   }
       
   svg {
+    height: 50%;
     margin: 0 auto;
     display: block;
     filter: grayscale(100%) opacity(0.7);
