@@ -34,6 +34,11 @@
     --navbar-height: 70px;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -211,35 +216,33 @@ nav li a:hover {
 
 /* hero */
 #hero {
-    margin-top: var(--navbar-height);
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../img/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    height: calc(100vh - var(--navbar-height));
-    width: 100%;
+    background-repeat: no-repeat;
+    margin-top: var(--navbar-height);
     margin-bottom: 2rem;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 .hero_logo {
-    max-width: 30%;
+    width: 400px;
 }
 
-.banner_content {
-    position: block;
+.banner_image {
+    display: table;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.banner_text {
     text-align: center;
-}
-
-#hero h1 {
+    display: table-cell;
     filter: drop-shadow(0 0 0.75rem var(--main-bg-color));
 }
 
-#hero p {
-    font-size: var(--font-small);
-    font-weight: 500;
-    margin: 0 auto;
-    max-width: 600px;
-    filter: drop-shadow(0 0 0.75rem var(--main-bg-color));
-}
 
 /* about */
 .grid_about {
@@ -378,7 +381,77 @@ footer a {
 
 
 /* phone responsivenss */
+@media screen and (max-height: 620px) and (orientation: landscape) {
+    /* navbar */
+    nav {
+        display: fixed;
+    }
+
+    .nav {
+        height: 70px;
+        width: 100%;
+    }
+
+    .navbar {
+        max-width: 100%;
+        display: block;
+    }
+
+    .navbar_toggle {
+        display: inline-block;
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+        color: #695209;
+        font-size: var(--font-medium);
+    }
+
+    .navbar_brand {
+        margin-left: 40px;
+        height: 50px;
+    }
+
+    .navbar_toggle:hover, .navbar_toggle:focus {
+        color: var(--accent-color);
+        transition: 600ms;
+    }
+
+    .navbar_items {
+        display: none;
+    }
+
+    .navbar_items li {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_items li:first-child {
+        border-top: 1px solid var(--accent-color);
+    }
+
+    .navbar_items li a {
+        font-size: var(--font-medium);
+        padding: 1%;
+    }
+
+    nav li {
+        display: block;
+        background-color: var(--secondary-bg-color);
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    .active {
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 620px) {
+
     /* navbar */
     nav {
         display: fixed;
@@ -460,22 +533,6 @@ footer a {
         grid-area: grid_content;
     }
 
-    /* hero */
-    .hero_logo {
-        margin-top: -20%;
-        max-width: 80%;
-        height: auto;
-    }
-
-    #hero {
-        padding-bottom: 10rem;
-    }
-
-    .banner_content {
-        position: block;
-        text-align: center;
-    }
-
     /* about */
     .grid_about {
         display: block;
@@ -534,22 +591,11 @@ footer a {
     }
 }
 
-@media only screen and (max-width: 400px) {
-    #hero {
-        padding-bottom: 20rem;
-    }
-}
-
 /* small tablet and laptop responsiveness */
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 620px) and (max-width: 960px) {
     .container {
         padding-right: 5%;
         padding-left: 5%;
-    }
-
-    /* hero */
-    .hero_logo {
-        margin-top: -10%;
     }
 
     /* default grid */
@@ -598,120 +644,123 @@ footer a {
 
         <section id="hero">
 
-          <div class="banner_content">
-              <img class="hero_logo" src="/img/logo.png" alt="Van Scherphuis" height="400" />
-              <h1 style="font-style: italic;">Van Scherphuis</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button type="button" class="hero-button"><a href="#contact">Neem contact met mij op</a></button>
-          </div>
-  
-      </section>
-  
-  <div class="container">
-      <section id="about" class="grid_about">
-          <div class="about_title">
-              <h2>Over ons</h2>
-          </div>
-  
-          <div class="about_content">
-              <div class="about_information">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. Massa ultricies mi quis hendrerit dolor magna eget. Mauris ultrices eros in cursus turpis massa. Fermentum dui faucibus in ornare.</p>
-                  <img src="/img/about.jpeg" class="about_image" />
-              </div>
-  
-              <div class="infocard card1">
-                  <h3>Live cooking</h3>
-                  <img />
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. </p>
-              </div>
-  
-              <div class="infocard card2">
-                  <h3>Ofyr</h3>
-                  <img />
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. </p>
-              </div>
-          </div>
-  
-      </section>
-  
-      <section id="inspiration" class="grid_default">
-          <div class="grid_title">
-              <h2>Inspiratie</h2>
-          </div>
-  
-          <div class="grid_content">
-              <div class="inspiration_grid">
-                  <div class="inspiration_card" style="background-image:url('../img/inspiration1.jpeg');"></div>
-                  <div class="inspiration_card inspiration_tall" style="background-image:url('../img/inspiration2.jpeg');"></div>
-                  <div class="inspiration_card" style="background-image:url('../img/inspiration3.jpeg');"></div>
-                  <div class="inspiration_card" style="background-image:url('../img/inspiration4.jpg');"></div>
-                  <div class="inspiration_card" style="background-image:url('../img/inspiration5.jpg');"></div>
-              </div>
-          </div>
-      </section>
-  
-      <section id="menus" class="grid_default">
-          <div class="grid_title">
-              <h2>Menus</h2>
-  
-              <div class="menu_list">
-                  <button class="buttonpill">Basic</button>
-                  <button class="buttonpill">Medium</button>
-                  <button class="buttonpill">Luxe</button>
-                  <button class="buttonpill">Premium</button>
-              </div>
-          </div>
-  
-          <div class="grid_content">
-              <div class="menu_details">
-                  <div class="menu_information">
-                      <div class="menu_title">
-                          <h4>Basic menu  <span class="menu_price">€20 p.p.</span></h4>
-                      </div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus</p>
-                  </div>
-  
-                  <div class="menu_items">
-                      <h4>Producten</h4>
-                      <ul>
-                          <li>Brood</li>
-                          <li>Gamba's</li>
-                          <li>Bruchetta</li>                        
-                          <li>Brood</li>
-                          <li>Gamba's</li>
-                          <li>Bruchetta</li>                        
-                          <li>Brood</li>
-                          <li>Gamba's</li>
-                          <li>Bruchetta</li>                        
-                          <li>Brood</li>
-                          <li>Gamba's</li>
-                          <li>Bruchetta</li>
-                      </ul>
-                  </div>
-              </div>
-  
-          </div>
-  
-      </section>
-  
-  
-      <section id="contact"  class="grid_default">
-
-        <div class="grid_title">
-            <h2>Meer weten?</h2>
-        </div>
-
-        <div class="grid_content"> 
-            <form method="post" action="/Home/FormOne">
-                <input type="text" name="FromName" placeholder="Naam" required />
-                <input type="text" name="Number" pattern="\d*" inputmode="numeric" placeholder="Telefoon nummer" required />
-                <input type="email" name="FromEmail" placeholder="E-mail" required />
-                <textarea name="Message" placeholder="Bericht" required></textarea>
-                <input type="submit" class="hero-button" value="Stuur een bericht!" />
-            </form>
-        </div>
-    </section>
-</div>
+            <div class="banner_image">
+                <div class="banner_text">
+                    <img class="hero_logo" src="~/img/logo.png" alt="Van Scherphuis" />
+                    <h1 style="font-style: italic;">Van Scherphuis</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button type="button" class="hero-button"><a href="#contact">Meer weten?</a></button>
+                </div>
+            </div>
+    
+        </section>
+    
+    <div class="container">
+        <section id="about" class="grid_about">
+            <div class="about_title">
+                <h2>Over ons</h2>
+            </div>
+    
+            <div class="about_content">
+                <div class="about_information">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. Massa ultricies mi quis hendrerit dolor magna eget. Mauris ultrices eros in cursus turpis massa. Fermentum dui faucibus in ornare.</p>
+                    <img src="~/img/about.jpeg" class="about_image" />
+                </div>
+    
+                <div class="infocard card1">
+                    <h3>Live cooking</h3>
+                    <img />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. </p>
+                </div>
+    
+                <div class="infocard card2">
+                    <h3>Ofyr</h3>
+                    <img />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. </p>
+                </div>
+            </div>
+    
+        </section>
+    
+        <section id="inspiration" class="grid_default">
+            <div class="grid_title">
+                <h2>Inspiratie</h2>
+            </div>
+    
+            <div class="grid_content">
+                <div class="inspiration_grid">
+                    <div class="inspiration_card" style="background-image:url('../img/inspiration1.jpeg');"></div>
+                    <div class="inspiration_card inspiration_tall" style="background-image:url('../img/inspiration2.jpeg');"></div>
+                    <div class="inspiration_card" style="background-image:url('../img/inspiration3.jpeg');"></div>
+                    <div class="inspiration_card" style="background-image:url('../img/inspiration4.jpg');"></div>
+                    <div class="inspiration_card" style="background-image:url('../img/inspiration5.jpg');"></div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="menus" class="grid_default">
+            <div class="grid_title">
+                <h2>Menus</h2>
+    
+                <div class="menu_list">
+                    <button class="buttonpill">Basic</button>
+                    <button class="buttonpill">Medium</button>
+                    <button class="buttonpill">Luxe</button>
+                    <button class="buttonpill">Premium</button>
+                </div>
+            </div>
+    
+            <div class="grid_content">
+                <div class="menu_details">
+                    <div class="menu_information">
+                        <div class="menu_title">
+                            <h4>Basic menu  <span class="menu_price">€20 p.p.</span></h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus</p>
+                    </div>
+    
+                    <div class="menu_items">
+                        <h4>Producten</h4>
+                        <ul>
+                            <li>Brood</li>
+                            <li>Gamba's</li>
+                            <li>Bruchetta</li>                        
+                            <li>Brood</li>
+                            <li>Gamba's</li>
+                            <li>Bruchetta</li>                        
+                            <li>Brood</li>
+                            <li>Gamba's</li>
+                            <li>Bruchetta</li>                        
+                            <li>Brood</li>
+                            <li>Gamba's</li>
+                            <li>Bruchetta</li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </section>
+    
+    
+        <section id="contact"  class="grid_default">
+    
+            <div class="grid_title">
+                <h2>Meer weten / vrijblijvend gesprek</h2>
+            </div>
+    
+            <div class="grid_content"> 
+                <form method="post" action="/Home/FormOne">
+                    <input type="text" name="FromName" placeholder="Naam" required />
+                    <input type="text" name="Number" pattern="\d*" inputmode="numeric" placeholder="Telefoon nummer" required />
+                    <input type="email" name="FromEmail" placeholder="E-mail" required />
+                    <textarea name="Message" placeholder="Bericht" required></textarea>
+                    <input type="submit" class="hero-button" value="Stuur een bericht!" />
+                </form>
+            </div>
+        </section>
+    </div>
+    
     
 
         <footer>
