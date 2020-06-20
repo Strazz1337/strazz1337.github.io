@@ -159,28 +159,16 @@ nav {
 }
 
 .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     margin: 0 auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     max-width: 70%;
     height: var(--navbar-height);
 }
@@ -209,34 +197,26 @@ nav li a:hover {
 
 /* default grid */
 .grid_default {
-    display: -ms-grid;
     display: grid;
-        grid-template-areas: "grid_title grid_content";
-    -ms-grid-columns: 1fr 2rem 4fr;
+    grid-template-areas: "grid_title grid_content";
     grid-template-columns: 1fr 4fr;
     grid-column-gap: 2rem;
     margin-bottom: 4rem;
 }
 
 .grid_title {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
     grid-area: grid_title;
     border-right: 2px solid var(--accent-color);
     padding-right: 1rem;
 }
 
 .grid_content {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
     grid-area: grid_content;
 }
 
 
 /* hero */
 #hero {
-    background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)) ), url('../img/hero-bg.jpg');
-    background: -o-linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../img/hero-bg.jpg');
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('../img/hero-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -262,20 +242,16 @@ nav li a:hover {
 .banner_text {
     text-align: center;
     display: table-cell;
-    -webkit-filter: drop-shadow(0 0 0.75rem var(--main-bg-color));
-            filter: drop-shadow(0 0 0.75rem var(--main-bg-color));
+    filter: drop-shadow(0 0 0.75rem var(--main-bg-color));
 }
 
 
 /* about */
 .grid_about {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto 2rem auto 2rem auto;
-        grid-template-areas: "about_title about_content"
+    grid-template-areas: "about_title about_content"
         "card1 card1"
         "card2 card2";
-    -ms-grid-columns: 1fr 2rem 4fr;
     grid-template-columns: 1fr 4fr;
     grid-gap: 2rem 2rem;
     margin-bottom: 4rem;
@@ -283,29 +259,19 @@ nav li a:hover {
 }
 
 .about_title {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
     grid-area: about_title;
     border-right: 2px solid var(--accent-color);
     padding-right: 1rem;
 }
 
 .about_content {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
     grid-area: about_content;
 }
 
 .about_information {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .about_information p {
@@ -323,10 +289,7 @@ nav li a:hover {
     background-color: var(--tertiary-bg-color);
     margin-top: 1rem;
     padding: 2rem 2rem;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
@@ -336,28 +299,20 @@ nav li a:hover {
 }
 
 .infocard:hover {
-    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card1 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: card1;
 }
 
 .card2{
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: card2;
 }
 
 
 /* inspiration */
 .inspiration_grid {
-    display: -ms-grid;
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -365,26 +320,14 @@ nav li a:hover {
 }
 
 .inspiration_card {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     max-width: 100%;
     height: auto;
     border-radius: 4px;
-    -webkit-transition: all 500ms;
-    -o-transition: all 500ms;
     transition: all 500ms;
     overflow: hidden;
     background-size: cover;
@@ -393,24 +336,19 @@ nav li a:hover {
 }
 
 .inspiration_tall {
-    -ms-grid-row-span: 2;
     grid-row: span 2 / auto;
 }
 
 /* menu */
 .menu_details {
-    display: -ms-grid;
     display: grid;
-        grid-template-areas: "menu_information menu_items";
-    -ms-grid-columns: 4fr 2rem 2fr;
+    grid-template-areas: "menu_information menu_items";
     grid-template-columns: 4fr 2fr;
     grid-gap: 2rem;
     margin-bottom: 4rem;
 }
 
 .menu_information {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
     grid-area: menu_information;
 }
 
@@ -419,8 +357,6 @@ nav li a:hover {
 }
 
 .menu_items {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
     grid-area: menu_items;
     padding-left: 2rem;
     border-left: 2px solid var(--accent-color);
@@ -432,15 +368,9 @@ nav li a:hover {
 
 /* footer */
 footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: var(--accent-color);
     font-weight: 700;
     padding: 1rem 1rem;
@@ -485,8 +415,6 @@ footer a {
 
     .navbar_toggle:hover, .navbar_toggle:focus {
         color: var(--accent-color);
-        -webkit-transition: 600ms;
-        -o-transition: 600ms;
         transition: 600ms;
     }
 
@@ -555,8 +483,6 @@ footer a {
 
     .navbar_toggle:hover, .navbar_toggle:focus {
         color: var(--accent-color);
-        -webkit-transition: 600ms;
-        -o-transition: 600ms;
         transition: 600ms;
     }
 
@@ -600,15 +526,11 @@ footer a {
     }
 
     .grid_title {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
         grid-area: grid_title;
         border-right: 0;
     }
 
     .grid_content {
-        -ms-grid-row: 1;
-        -ms-grid-column: 3;
         grid-area: grid_content;
     }
 
@@ -646,8 +568,6 @@ footer a {
     }
 
     .menu_items {
-        -ms-grid-row: 1;
-        -ms-grid-column: 3;
         grid-area: menu_items;
         border-left: 0;
         padding-left: 0;
@@ -681,23 +601,57 @@ footer a {
 
     /* default grid */
     .grid_default {
-        -ms-grid-columns: 5fr 14fr;
-        grid-template-columns: 5fr 14fr;
+        display: block;
     }
 
+    .grid_title {
+        grid-area: grid_title;
+        border-right: 0;
+    }
+
+    .grid_content {
+        grid-area: grid_content;
+    }
 
     /* about */
     .grid_about {
         display: block;
     }
 
+    .about_title {
+        border-right: 0;
+    }
+
+    .about_information {
+        display: block;
+        margin: 0 auto;
+    }
+
     .about_information p {
-        width: 100%;
+        max-width: 100%;
     }
 
     .about_image {
+        position: relative;
         width: 80%;
+        padding: 1.5rem;
     }
+
+    /* menu */
+    .menu_details {
+        display: block;
+    }
+
+    .menu_items h4 {
+        text-align: left;
+    }
+
+    .menu_items {
+        grid-area: menu_items;
+        border-left: 0;
+        padding-left: 0;
+    }
+
 }
       </style>
               <header>
@@ -728,7 +682,7 @@ footer a {
 
             <div class="banner_image">
                 <div class="banner_text">
-                    <img class="hero_logo" src="/img/logo.png" alt="Van Scherphuis" />
+                    <img class="hero_logo" src="~/img/logo.png" alt="Van Scherphuis" />
                     <h1 style="font-style: italic;">Van Scherphuis</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <button type="button" class="hero-button"><a href="#contact">Meer weten?</a></button>
@@ -736,6 +690,7 @@ footer a {
             </div>
     
         </section>
+    
     
     <div class="container">
         <section id="about" class="grid_about">
@@ -746,7 +701,7 @@ footer a {
             <div class="about_content">
                 <div class="about_information">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. Massa ultricies mi quis hendrerit dolor magna eget. Mauris ultrices eros in cursus turpis massa. Fermentum dui faucibus in ornare.</p>
-                    <img src="/img/about.jpeg" class="about_image" />
+                    <img src="~/img/about.jpeg" class="about_image" />
                 </div>
     
                 <div class="infocard card1">
@@ -761,8 +716,8 @@ footer a {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. </p>
                 </div>
             </div>
-    
         </section>
+    
     
         <section id="inspiration" class="grid_default">
             <div class="grid_title">
@@ -779,6 +734,7 @@ footer a {
                 </div>
             </div>
         </section>
+    
     
         <section id="menus" class="grid_default">
             <div class="grid_title">
@@ -806,13 +762,13 @@ footer a {
                         <ul>
                             <li>Brood</li>
                             <li>Gamba's</li>
-                            <li>Bruchetta</li>                        
+                            <li>Bruchetta</li>
                             <li>Brood</li>
                             <li>Gamba's</li>
-                            <li>Bruchetta</li>                        
+                            <li>Bruchetta</li>
                             <li>Brood</li>
                             <li>Gamba's</li>
-                            <li>Bruchetta</li>                        
+                            <li>Bruchetta</li>
                             <li>Brood</li>
                             <li>Gamba's</li>
                             <li>Bruchetta</li>
@@ -825,13 +781,13 @@ footer a {
         </section>
     
     
-        <section id="contact"  class="grid_default">
+        <section id="contact" class="grid_default">
     
             <div class="grid_title">
                 <h2>Meer weten / vrijblijvend gesprek</h2>
             </div>
     
-            <div class="grid_content"> 
+            <div class="grid_content">
                 <form method="post" action="/Home/FormOne">
                     <input type="text" name="FromName" placeholder="Naam" required />
                     <input type="text" name="Number" pattern="\d*" inputmode="numeric" placeholder="Telefoon nummer" required />
