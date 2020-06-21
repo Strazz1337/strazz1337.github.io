@@ -11,5 +11,7 @@ navToggle.addEventListener('click', function () {
 function removeDropdownMenu() {
     if (nav.classList.contains('active')) {
         nav.classList.toggle('active');
+        navIcon.classList.toggle('fa-bars');
+        navIcon.classList.toggle('fa-times-circle');
     }
 }
