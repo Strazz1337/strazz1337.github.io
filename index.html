@@ -245,6 +245,10 @@ nav li a:hover {
     filter: drop-shadow(0 0 0.75rem var(--main-bg-color));
 }
 
+.banner_text h1 {
+    font-style: italic;
+    color: var(--accent-color);
+}
 
 /* about */
 .grid_about {
@@ -691,8 +695,8 @@ footer a {
             <div class="banner_image">
                 <div class="banner_text">
                     <img class="hero_logo" src="/img/logo.png" alt="Van Scherphuis" />
-                    <h1 style="font-style: italic;">Van Scherphuis</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h1>Van Scherphuis</h1>
+                    <p>Live Cooking Catering voor de echte Bourgondiër. Geheel naar eigen wens in te vullen.</p>
                     <button type="button" class="hero-button"><a href="#contact">Meer weten?</a></button>
                 </div>
             </div>
@@ -708,20 +712,29 @@ footer a {
     
             <div class="about_content">
                 <div class="about_information">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. Massa ultricies mi quis hendrerit dolor magna eget. Mauris ultrices eros in cursus turpis massa. Fermentum dui faucibus in ornare.</p>
+                    <p>
+                        Van Scherphuis Live Cooking Catering is voor de echte bourgondiër. Onze passie is om samen met u te werken naar de perfecte beleving met bijvoorbeeld onze parel: de OFYR. Een compleet nieuwe manier om buiten te koken en onze gasten te vermaken. We staan voor vakmanschap, eerlijke gerechten, verse producten, en uiteraard gezelligheid.
+                        Geeft u binnenkort een feest(je), een huwelijk, tuinfeest, borrel of iets heel anders? Wij zijn uw bedrijf!
+                        Neem voor alle mogelijkheden contact met ons op.
+                        <br /><br />
+                        Tot snel!
+                        <br /><br />
+                        Van Scherphuis Live Cooking Catering
+    
+                    </p>
                     <img src="/img/about.jpeg" class="about_image" />
                 </div>
     
                 <div class="infocard card1">
                     <h3>Live cooking</h3>
-                    <img />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. </p>
+                    <p>
+                        Het Live Cooking concept is ontstaan uit onze liefde voor producten en lekker eten. Deze liefde delen we graag met u. Denk bijvoorbeeld aan het grillen van een prachtig stuk vlees of vis of een geheel vegetarisch menu. Wij nemen u graag mee in onze beleving door middel van onze OFYR! Een compleet nieuwe manier van Live Cooking! Gezellig met vrienden, een zakelijke gelegenheid of een bruiloft, wij verzorgen en entertainen elke gelegenheid.
+                    </p>
                 </div>
     
                 <div class="infocard card2">
-                    <h3>Ofyr</h3>
-                    <img />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. </p>
+                    <h3>OFYR</h3>
+                    <p>Zoals al eerder genoemd, is dit onze parel waar we heel erg trots op zijn. Met veel plezier en liefde laten we u kennis maken met onze Ofyr. Hét onderdeel wat de Live Cooking echt af maakt. Geen ‘gewone’ barbecue maar een prachtig ronde, op hout gestookte vuurschaal. Door zijn ronde vorm is het mogelijk dat u vanaf elk punt kunt genieten van de ‘Grill Skills’ van de chef. </p>
                 </div>
             </div>
         </section>
@@ -748,12 +761,7 @@ footer a {
             <div class="grid_title">
                 <h2>Menus</h2>
     
-                <div class="menu_list">
-                    <button class="buttonpill">Basic</button>
-                    <button class="buttonpill">Medium</button>
-                    <button class="buttonpill">Luxe</button>
-                    <button class="buttonpill">Premium</button>
-                </div>
+                <div class="menu_list" id="menu_list"></div>
             </div>
     
             <div class="grid_content">
