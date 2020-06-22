@@ -295,12 +295,26 @@ nav li a:hover {
     padding: 2rem 2rem;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    display: flex;
+    flex-direction: row;
 }
 
 .infocard h3 {
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 1rem;
+}
+
+.infocard_information {
+    align-self: flex-start;
+    width: 70%;
+}
+
+.infocard_image {
+    position: relative;
+    width: 30%;
+    padding: 1.5rem;
+    align-self: flex-end;
 }
 
 .infocard:hover {
@@ -314,7 +328,6 @@ nav li a:hover {
 .card2{
     grid-area: card2;
 }
-
 
 /* inspiration */
 .inspiration_grid {
@@ -563,6 +576,19 @@ footer a {
         padding: 1.5rem;
     }
 
+    .infocard {
+        display: block;
+    }
+
+    .infocard_information {
+        min-width: 100%;
+    }
+
+    .infocard_image {
+        position: relative;
+        width: 80%;
+    }
+
     /* menu */
     .menu_details {
         display: block;
@@ -640,6 +666,19 @@ footer a {
         position: relative;
         width: 80%;
         padding: 1.5rem;
+    }
+
+    .infocard {
+        display: block;
+    }
+
+    .infocard_information {
+        min-width: 100%;
+    }
+
+    .infocard_image {
+        position: relative;
+        width: 80%;
     }
 
     /* menu */
@@ -727,15 +766,20 @@ footer a {
                 </div>
     
                 <div class="infocard card1">
-                    <h3>Live cooking</h3>
-                    <p>
-                        Het Live Cooking concept is ontstaan uit onze liefde voor producten en lekker eten. Deze liefde delen we graag met u. Denk bijvoorbeeld aan het grillen van een prachtig stuk vlees of vis of een geheel vegetarisch menu. Wij nemen u graag mee in onze beleving door middel van onze OFYR! Een compleet nieuwe manier van Live Cooking! Gezellig met vrienden, een zakelijke gelegenheid of een bruiloft, wij verzorgen en entertainen elke gelegenheid.
-                    </p>
+                    <div class="infocard_information">
+                        <h3>Live cooking</h3>
+                        <p>
+                            Het Live Cooking concept is ontstaan uit onze liefde voor producten en lekker eten. Deze liefde delen we graag met u. Denk bijvoorbeeld aan het grillen van een prachtig stuk vlees of vis of een geheel vegetarisch menu. Wij nemen u graag mee in onze beleving door middel van onze OFYR! Een compleet nieuwe manier van Live Cooking! Gezellig met vrienden, een zakelijke gelegenheid of een bruiloft, wij verzorgen en entertainen elke gelegenheid.
+                        </p>
+                    </div>
                 </div>
     
                 <div class="infocard card2">
-                    <h3>OFYR</h3>
-                    <p>Zoals al eerder genoemd, is dit onze parel waar we heel erg trots op zijn. Met veel plezier en liefde laten we u kennis maken met onze Ofyr. Hét onderdeel wat de Live Cooking echt af maakt. Geen ‘gewone’ barbecue maar een prachtig ronde, op hout gestookte vuurschaal. Door zijn ronde vorm is het mogelijk dat u vanaf elk punt kunt genieten van de ‘Grill Skills’ van de chef. </p>
+                    <div class="infocard_information">
+                        <h3>OFYR</h3>
+                        <p>Zoals al eerder genoemd, is dit onze parel waar we heel erg trots op zijn. Met veel plezier en liefde laten we u kennis maken met onze Ofyr. Hét onderdeel wat de Live Cooking echt af maakt. Geen ‘gewone’ barbecue maar een prachtig ronde, op hout gestookte vuurschaal. Door zijn ronde vorm is het mogelijk dat u vanaf elk punt kunt genieten van de ‘Grill Skills’ van de chef. </p>
+                    </div>
+                    <img src="/img/ofyr.jpg" class="infocard_image" />
                 </div>
             </div>
         </section>
